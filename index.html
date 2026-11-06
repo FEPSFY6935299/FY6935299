@@ -82,6 +82,18 @@ While Quantum computers use Qubits which differ from Binary bits in the sense th
 
 What this means is that while a string of Binary bits can only represent 1 string given by formula N=2^n, a string of Qubits of the same length can represent all of the possible strings that the same number of binary bits could represent at once until observed. Whilst this is a much larger mathematical space, it does not automatically mean quantum computing is superior to the binary bit system. This is because complex algorithms need to be written to decode these quantum strings to receive a result.
 
+<h3>Comparison of Binary Bits and Qubits</h3>
+
+<p>
+The graph below shows how the number of possible states increases as the number of bits or qubits increases. Both systems have 2^n possible basis states, however quantum computers can use superposition to represent a combination of these states within a quantum system until measurement.
+</p>
+
+<img src="https://quickchart.io/chart?width=650&height=350&c={type:'line',data:{labels:['1','2','3','4','5','6','7','8'],datasets:[{label:'Binary bits',data:[2,4,8,16,32,64,128,256],borderColor:'blue',fill:false},{label:'Qubit basis states',data:[2,4,8,16,32,64,128,256],borderColor:'green',fill:false}]},options:{scales:{yAxes:[{scaleLabel:{display:true,labelString:'Number of possible states'},ticks:{beginAtZero:true}}],xAxes:[{scaleLabel:{display:true,labelString:'Number of bits or qubits'}}]}}}" alt="Graph comparing binary bits and qubit basis states">
+
+<p>
+As shown in the graph, both systems have the same number of possible basis states mathematically. The difference is that qubits can exist in a superposition of these states, whereas a classical binary register holds one definite bit string at a time.
+</p>
+
 <br><br>
 
 <b>Why does quantum computing not run modern software right now?</b>
