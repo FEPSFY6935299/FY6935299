@@ -1,186 +1,338 @@
+
 <!DOCTYPE html>
-
 <html>
-<title>My Daily Activities</title>
-<script type=”text/javascript” src=https://www.gstatic.com/charts/loader.js></script>
-  <div id=”chart_div”></div>
-  <script type=”text/javascript”>
-google.charts.load(‘current’, { ‘packages’ : [‘corechart’] });
-google.charts.setOnLoadCallback(drawChart)
-    function drawChart() {
-var data = google.visualization.arrayToDataTable([
-[‘Task’, ‘Hours per Day’],
-[‘Work’, 8],
-[‘Sleep’, 8],
-    [‘Eat’, 2],
-[‘Study’, 4],
-[‘Exercise’, 2]
-]);
-var options = {
-title: ‘My Daily Activities’
-};
-var chart = new google.visualization.PieChart(document.getElementById(‘chart_div’));
-chart.draw(data, options);
-}
-</script>
 <head>
-  <head><img src="WebBanner2026.png" alt="Banner" width="900" height-"300"></head>
-<h1><b>ENG0018 Computer Laboratory 2026/27</b><h1>
-  <h2>Student URN: 6935299</h2
-  <hr>
-<h2 style=”font-
-family:calibri:”><b>Conference paper: Quantum Computing in Financial Services</b></h2>
-<head><style>
-  table { font-family: arial, sans-serif;
-         border-collapse: collapse;
-         width: 30%;
-         }
+<title>Quantum Computing in Financial Services</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+}
+
 td, th {
-  border:1px solid #dddddd:
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+p.ex1 {
+    margin-left: 250px;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: Calibri, sans-serif;
+}
+
+.mySlides {
+    display: none;
 }
 </style>
-<style>
-  p.ex1 {
-    margin-left: 250px
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
-<link rel="stylesheet"
-href="https://www.w3schools.com/w3css/4/w3.css">
-  <style>
-    .mySlides {display:none;}
-    </style>
-  <body style="background-color:#FFFFFF;margin-left:50px;">
-    <hr> <h3 id="Abstract">Abstract</h3>
-    <p class="ex1">
-      <pre>This paper analyses the future of quantum physics and its application in the world of computing and how this will allow the world of 
-      financial services to evolve</pre>
-  </p> </body>
- </style>
-  <body style="background-color:#FFFFFF;margin-left:50px;">
-    <hr> 
-    
-    <h3 id="Introduction">Introduction</h3>
-    <p id="IntroductionCount">  
-   Standard Classical Computing models use binary bits of either value 0 or 1 (either on or off) whilst in small numbers
-      of binary bits cannot display a lot of information eg 4 bits can represent 16 different pieces of information the
-      formula for this is N=2^n. Classical computers are simply systems of Billions of these bits set up to create logic
-      gates which can be used to perform calculations. This Binary system powers almost all software in today’s world.
-      While Quantum computers use Qubits which differ from Binary bits in the sense that instead of only being on or off,
-      Qubits can be in a superposition of either “on or off” until observed.
-      
-  </p> 
-  </body>
-  <hr> 
-  <h3 id="Analysis and discussion">Analysis and discussion</h3>
-  <p id="Analysis and discussionCount">
-  Why is it Mathematically relevant 
-What this means is that while a string of Binary bits can only represent 1 string given by formula N= a string of Qubits of the same length can represent all of the possible strings that that same number of binary bits could represent at once until observed. Whilst this is a much larger mathematical space it does not automatically means quantum computing is superior to the binary bit system. This is because complex algorithms need to be written to decode these quantum strings to receive a result. 
-Why does quantum computing not run modern software right now
-Whilst multiple hardware platforms exist in 2026 the technology to support their hardware. This means in 2026 using quantum computers can still not be used for RSA decryption, one single Qubit that gives a logical output has many qubits that aren’t logical meaning large swathes of hardware meaning quantum computers can’t be practical for everyday use, Connectivity is also a problem as Qubits and binary systems cannot interact with binary systems, Algorithm limitations  also prevent Quantum computers from being able to solve large scale mathematical problems attributed with financial datasets
 
-Why Does Quantum computing change security in financial services
-Cryptography (Cryptography is the science, study, and practice of securing and authenticating people, data, transactions) RSA cryptography is one of the most common forms of security during online transaction and works via a form of prime factorisation. Conventional binary computers could in theory be used to find the prime factors of these huge numbers allowing for criminals to find private keys giving access to multiple different facets of online wallets as well as private online banking. However Financial services will also benefit from this because of the number of mathematical calculations being possible. One Real world area where this could happen is in investment banking specifically in Derivatives pricing, where banks price financial instruments such as: Mortgage-backed securities or interest rate swaps, Pricing these requires an immense amount of computation power as Highly sophisticated mathematical models are used these models begin to produce errors = O(1/√N)
-This can be reduced by Quantum amplitude estimation to O(1/N) essentially meaning an improved evaluation of potential risks and potential price and upsides of complex products.
-Retail and commercial banking will also be impacted in two main ways. The first being through Credit risk assessment, This is where banks take large sets of data about people and their financial habits and determine the likelihood that any credit borrowed whether through credit cards or through mortgages will be defaulted on or paid back. Models predicting this use 10’s of variables across millions of people and need to identify patterns in these complex datasets however conventional computing power struggles to keep up while quantum machine learning will be able to identify patterns in these financial datasets.
-Another keyway is because of Quantum machine learning and applies to Fraud detection this is because often time financial fraud uses sophisticated networks of transactions, accounts and people to commit fraud which will be easier to decipher/identify with quantum machine learning.
+<body>
 
+<img src="WebBanner2026.png" alt="Banner" width="900" height="300">
 
-The way it works in the modern world is through Prime Factorisation also referred to as RSA encryption. This works by taking the two prime factors of a number eg 91 has the prime factors 7 and 13 in this example the 91 would be a public key that anyone can see
+<h1><b>ENG0018 Computer Laboratory 2026/27</b></h1>
 
-  <!table of contents>
-  <table>
-    <tr><th>Table of contents</th></tr>
-    <tr><td> <a href="#Abstract">Abstract</td></tr>
-    <tr><td><a href="#Introduction">Introduction</td></tr> 
-    <tr><td><a href="#Analysis and discussion">Analysis and discussion</td></tr>
-  </table>
+<h2>Student URN: 6935299</h2>
+
 <hr>
-<!Table References>
-  <table><tr><th>References</th></tr>
-  <tr><td><a href="https://www.fotmob.com/">Fotmob</a></td></tr>
-  
-  
-  </table>
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- Last commit time display -->
+
+<h2 style="font-family:calibri;">
+<b>Conference paper: Quantum Computing in Financial Services</b>
+</h2>
+
+<hr>
+
+<h3 id="Abstract">Abstract</h3>
+
+<p class="ex1">
+This paper analyses the future of quantum computing and its application in the world of financial services and how this technology could allow financial institutions to evolve.
+</p>
+
+<hr>
+
+<h3 id="Introduction">Introduction</h3>
+
+<p id="IntroductionCount">
+
+Standard Classical Computing models use binary bits of either value 0 or 1 (either on or off). Whilst in small numbers binary bits cannot display a lot of information, eg 4 bits can represent 16 different pieces of information. The formula for this is N=2^n. Classical computers are simply systems of billions of these bits set up to create logic gates which can be used to perform calculations. This Binary system powers almost all software in today's world.
+
+While Quantum computers use Qubits which differ from Binary bits in the sense that instead of only being on or off, Qubits can be in a superposition of either "on or off" until observed.
+
+</p>
+
+<hr>
+
+<h3 id="Analysis and discussion">Analysis and discussion</h3>
+
+<p id="Analysis and discussionCount">
+
+<b>Why is it Mathematically relevant?</b>
+
+<br><br>
+
+What this means is that while a string of Binary bits can only represent 1 string given by formula N=2^n, a string of Qubits of the same length can represent all of the possible strings that the same number of binary bits could represent at once until observed. Whilst this is a much larger mathematical space, it does not automatically mean quantum computing is superior to the binary bit system. This is because complex algorithms need to be written to decode these quantum strings to receive a result.
+
+<br><br>
+
+<b>Why does quantum computing not run modern software right now?</b>
+
+<br><br>
+
+Whilst multiple hardware platforms exist in 2026, the technology to support their hardware is still developing. This means in 2026 using quantum computers can still not be used for RSA decryption. One single Qubit that gives a logical output has many qubits that aren't logical, meaning large swathes of hardware are needed. This means quantum computers cannot yet be practical for everyday use.
+
+<br><br>
+
+Connectivity is also a problem as Qubits and binary systems operate differently and cannot directly interact without specialised interfaces. Algorithm limitations also prevent Quantum computers from being able to solve all large-scale mathematical problems attributed with financial datasets.
+
+<br><br>
+
+<b>Why Does Quantum computing change security in financial services?</b>
+
+<br><br>
+
+Cryptography (Cryptography is the science, study, and practice of securing and authenticating people, data, transactions) is important in financial services. RSA cryptography is one of the most common forms of security during online transactions and works via a form of prime factorisation.
+
+<br><br>
+
+Conventional binary computers could in theory be used to find the prime factors of these huge numbers, allowing for criminals to find private keys giving access to multiple different facets of online wallets as well as private online banking.
+
+<br><br>
+
+However Financial services will also benefit from this because of the number of mathematical calculations being possible.
+
+<br><br>
+
+<b>Investment Banking – Derivatives Pricing</b>
+
+<br><br>
+
+One Real world area where this could happen is in investment banking specifically in Derivatives pricing, where banks price financial instruments such as: Mortgage-backed securities or interest rate swaps.
+
+<br><br>
+
+Pricing these requires an immense amount of computation power as Highly sophisticated mathematical models are used. These models begin to produce errors = O(1/√N).
+
+<br><br>
+
+This can be reduced by Quantum amplitude estimation to O(1/N), essentially meaning an improved evaluation of potential risks and potential price and upsides of complex products.
+
+<br><br>
+
+<b>Retail and Commercial Banking</b>
+
+<br><br>
+
+Retail and commercial banking will also be impacted in two main ways.
+
+<br><br>
+
+<b>Credit Risk Assessment</b>
+
+<br><br>
+
+The first being through Credit risk assessment. This is where banks take large sets of data about people and their financial habits and determine the likelihood that any credit borrowed, whether through credit cards or through mortgages, will be defaulted on or paid back.
+
+<br><br>
+
+Models predicting this use 10's of variables across millions of people and need to identify patterns in these complex datasets. However conventional computing power struggles to keep up while quantum machine learning could potentially help identify patterns in these financial datasets.
+
+<br><br>
+
+<b>Fraud Detection</b>
+
+<br><br>
+
+Another key way is because of Quantum machine learning and applies to Fraud detection. This is because often time financial fraud uses sophisticated networks of transactions, accounts and people to commit fraud which could potentially be easier to decipher and identify with quantum machine learning.
+
+<br><br>
+
+<b>How Does RSA Encryption Work?</b>
+
+<br><br>
+
+The way it works in the modern world is through Prime Factorisation, also referred to as RSA encryption. This works by taking the two prime factors of a number, eg 91 has the prime factors 7 and 13.
+
+<br><br>
+
+In this example, 91 would be a simplified example of a publicly known number. The difficulty comes when numbers become extremely large, as conventional computers struggle to work backwards and find the original prime factors.
+
+</p>
+
+<hr>
+
+<h3 id="Conclusion">Conclusion</h3>
+
+<p id="ConclusionCount">
+
+Ultimately, quantum computing could have a significant impact on financial services because of its ability to approach certain mathematical problems differently from conventional binary computers.
+
+<br><br>
+
+This could affect financial security through RSA encryption, while also creating opportunities for investment banking through derivatives pricing and risk assessment. Retail and commercial banking could also benefit from potential improvements in credit risk assessment and fraud detection.
+
+<br><br>
+
+Although quantum computing is still developing and cannot currently replace conventional computing systems, its mathematical applications could become increasingly important to the financial services industry.
+
+</p>
+
+<hr>
+
+<h3 id="Table of contents">Table of contents</h3>
+
+<table>
+<tr>
+<th>Table of contents</th>
+</tr>
+
+<tr>
+<td><a href="#Abstract">Abstract</a></td>
+</tr>
+
+<tr>
+<td><a href="#Introduction">Introduction</a></td>
+</tr>
+
+<tr>
+<td><a href="#Analysis and discussion">Analysis and discussion</a></td>
+</tr>
+
+<tr>
+<td><a href="#Conclusion">Conclusion</a></td>
+</tr>
+</table>
+
+<hr>
+
+<h3>References</h3>
+
+<table>
+<tr>
+<th>References</th>
+</tr>
+
+<tr>
+<td>Add your research sources here</td>
+</tr>
+</table>
+
+<hr>
+
+<!-- Last commit time display -->
+
 <div id="last-updated">Loading last update time...</div>
-<!-- Verify Button -->
+
 <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
+Verify Last Modified Time
 </button>
+
 <script>
-    async function getLastUpdatedTime() {
-        const username = 'FEPSFY6935299';
-        const repo = 'FY6935299';
-       
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+
+async function getLastUpdatedTime() {
+
+    const username = 'FEPSFY6935299';
+    const repo = 'FY6935299';
+
+    const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+
+    try {
+
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error('Error fetching data');
         }
+
+        const commits = await response.json();
+
+        if (commits && commits.length > 0) {
+
+            const lastCommitDate = new Date(commits[0].commit.committer.date);
+
+            document.getElementById('last-updated').innerText =
+                `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+
+        } else {
+
+            document.getElementById('last-updated').innerText =
+                'No commits found in the repository.';
+
+        }
+
+    } catch (error) {
+
+        document.getElementById('last-updated').innerText =
+            'Error fetching update time. Please check the repository details.';
+
     }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
+
+}
+
+async function verifyLastUpdatedTime() {
+
+    document.getElementById('last-updated').innerText = 'Verifying...';
+
+    await getLastUpdatedTime();
+
+    alert("Last modified time has been successfully verified from GitHub API.");
+
+}
+
 </script>
 
-
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
 <hr>
+
+<!-- Word count function -->
+
+<p id="totalWordCount"></p>
+
 <script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
+
+function displayWordCount(sectionId) {
+
     const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
+
     const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
+
+    return wordArray.length;
+
+}
+
+function displayTotalWordCount() {
+
     const IntroductionCount = displayWordCount('IntroductionCount');
+
     const AnalysisCount = displayWordCount('Analysis and discussionCount');
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
+
+    const ConclusionCount = displayWordCount('ConclusionCount');
+
+    const totalWordCount = IntroductionCount + AnalysisCount + ConclusionCount;
+
+    document.getElementById("totalWordCount").innerText =
+        `Total word count: ${totalWordCount}`;
+
+}
+
+window.onload = function() {
+
+    getLastUpdatedTime();
+
+    displayTotalWordCount();
+
+};
+
 </script>
+
+</body>
 </html>
+
